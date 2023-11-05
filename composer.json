@@ -1,0 +1,27 @@
+{
+    "name": "colossal/colossal-middleware-queue",
+    "type": "library",
+    "description": "A PSR-15 middleware allowing multiple other PSR-15 middleware to be treated as a single entity.",
+    "keywords": ["Middleware", "PSR-15"],
+    "homepage": "https://github.com/colossalg/Colossal-Middleware-Queue",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Angus Wylie",
+            "homepage": "https://github.com/colossalg",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Colossal\\MiddlewareQueue\\": "src/"}
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.9",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "require": {
+        "php": "^8.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    }
+}
