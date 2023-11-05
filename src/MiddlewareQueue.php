@@ -25,6 +25,14 @@ class MiddlewareQueue implements MiddlewareInterface
     }
 
     /**
+     * Copy constructor.
+     */
+    public function __clone()
+    {
+        $this->queue = clone $this->queue;
+    }
+
+    /**
      * @see MiddlewareInterface::process()
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
