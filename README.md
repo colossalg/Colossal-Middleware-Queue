@@ -20,7 +20,7 @@ class DummyMiddlewareA
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         echo 'A';
-        return $handler->process($request);
+        return $handler->handle($request);
     }
 }
 
@@ -29,7 +29,7 @@ class DummyMiddlewareB
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         echo 'B';
-        return $handler->process($request);
+        return $handler->handle($request);
     }
 }
 
